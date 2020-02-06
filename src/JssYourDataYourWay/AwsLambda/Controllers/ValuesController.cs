@@ -1,8 +1,10 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AwsLambda.Controllers
 {
+    // https://jssyourdatayourway.aws.boro2g.co.uk/api/values
+
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {

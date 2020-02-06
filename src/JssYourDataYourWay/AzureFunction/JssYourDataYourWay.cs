@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace AzureFunction
 {
-    // https://jssyourdatayourway.azurewebsites.net/api/JssYourDataYourWay?name=bob
+    // https://jssyourdatayourway.azure.boro2g.co.uk/api/JssYourDataYourWay?name=bob
 
     public static class JssYourDataYourWay
     {
