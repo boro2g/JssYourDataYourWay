@@ -1,3 +1,4 @@
+﻿using System;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -9,11 +10,13 @@ using Newtonsoft.Json;
 
 namespace AzureFunction
 {
-    public static class Function1
+    // https://jssyourdatayourway.azurewebsites.net/api/JssYourDataYourWay?name=bob
+
+    public static class JssYourDataYourWay
     {
-        [FunctionName("Function1")]
+        [FunctionName("JssYourDataYourWay")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
@@ -25,7 +28,7 @@ namespace AzureFunction
             name = name ?? data?.name;
 
             return name != null
-                ? (ActionResult)new OkObjectResult($"Hello, {name}")
+                ? (ActionResult)new OkObjectResult($"Hello, {name}. {Environment.GetEnvironmentVariable("TestSetting")}")
                 : new BadRequestObjectResult("Please pass a name on the query string or in the request body");
         }
     }
