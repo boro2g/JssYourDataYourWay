@@ -8,3 +8,10 @@ npm install -g @sitecore-jss/sitecore-jss-cli
 jss create jss-your-data-your-way react
 cd jss-your-data-your-way
 jss start
+
+-------------------------------------------------------
+
+todo
+- setup integrated graphql (https://jss.sitecore.com/docs/techniques/graphql/integrated-graphql)
+- setup integration with lambda
+- setup integration with azure functions
