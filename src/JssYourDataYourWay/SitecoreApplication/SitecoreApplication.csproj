@@ -509,7 +509,8 @@
     <Content Include="App_Config\Include\JssYourDataYourWay\ExampleContextExtension.config" />
     <Content Include="App_Config\Include\JssYourDataYourWay\Sitecore.Services.GraphQL.Content.Web.config" />
     <Content Include="App_Config\Include\JssYourDataYourWay\Sitecore.Services.GraphQL.Content.Master.config" />
-    <Content Include="App_Config\Include\JssYourDataYourWay\JssApp.config" />
+    <Content Include="App_Config\Include\JssYourDataYourWay\jss-your-data-your-way.config" />
+    <Content Include="App_Config\Include\JssYourDataYourWay\jss-your-data-your-way.deploysecret.config" />
     <None Include="Properties\PublishProfiles\SitecoreDeploy.pubxml" />
     <Content Include="readme.txt" />
     <Content Include="Web.config" />

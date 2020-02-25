@@ -22,6 +22,6 @@ jss start
 
 todo
 - setup integrated graphql (https://jss.sitecore.com/docs/techniques/graphql/integrated-graphql)
-- setup integration with lambda
-- setup integration with azure functions
+- chained content resolvers
+- dynamic content resolvers
 
