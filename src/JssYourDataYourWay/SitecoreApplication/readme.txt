@@ -18,10 +18,11 @@ jss create jss-your-data-your-way react
 cd jss-your-data-your-way
 jss start
 
+jss deploy app --acceptCertificate [cert thumbprint]
+
 -------------------------------------------------------
 
 todo
-- setup integrated graphql (https://jss.sitecore.com/docs/techniques/graphql/integrated-graphql)
 - chained content resolvers
 - dynamic content resolvers
 

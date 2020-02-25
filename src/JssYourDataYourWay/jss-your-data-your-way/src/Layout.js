@@ -73,8 +73,7 @@ const Layout = ({ route }) => (
 
     {/* root placeholder for the app, which we add components to using route data */}
     <div className="container">
-      <Placeholder name="jss-main" rendering={route} />
-      <Placeholder name="content" rendering={route} />
+      <Placeholder name="jss-main" rendering={route} />      
     </div>
   </React.Fragment>
 );
