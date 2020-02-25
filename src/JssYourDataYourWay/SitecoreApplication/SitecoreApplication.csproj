@@ -519,6 +519,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="JssYourDataYourWay\ExampleContentsResolver.cs" />
     <Compile Include="JssYourDataYourWay\ExampleContextExtension.cs" />
+    <Compile Include="JssYourDataYourWay\ProxyContentsResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

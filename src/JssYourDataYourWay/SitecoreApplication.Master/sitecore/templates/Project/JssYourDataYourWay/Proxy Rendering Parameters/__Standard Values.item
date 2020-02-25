@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {1A0039C3-BDD5-4F5E-A662-5361B9BF79C5}
+database: master
+path: /sitecore/templates/Project/JssYourDataYourWay/Proxy Rendering Parameters/__Standard Values
+parent: {5301B502-18EE-40F6-A8BC-CD8FCCA8A023}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {5301B502-18EE-40F6-A8BC-CD8FCCA8A023}
+templatekey: Proxy Rendering Parameters
+
+----field----
+field: {E40A1611-A00D-465B-BD73-F31585B47CF6}
+name: Timeout
+key: timeout
+content-length: 3
+
+500
+----field----
+field: {3094D236-5985-4C4F-AE6A-E30740885532}
+name: Caching
+key: caching
+content-length: 15
+
+0|0|0|0|0|0|0|0
+----version----
+language: en
+version: 1
+revision: 0e4cffdb-bfd9-451e-a4f6-357c164888c3
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20200225T113807Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+0e4cffdb-bfd9-451e-a4f6-357c164888c3
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20200225T114011Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

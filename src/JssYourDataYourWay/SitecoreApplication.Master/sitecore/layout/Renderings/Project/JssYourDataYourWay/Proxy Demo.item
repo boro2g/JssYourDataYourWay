@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {2118B5BF-F8F9-4790-A40D-FF1E67F5F3C0}
+database: master
+path: /sitecore/layout/Renderings/Project/JssYourDataYourWay/Proxy Demo
+parent: {6E9962AF-5254-4350-821C-F9EB6E9988DC}
+name: Proxy Demo
+master: {00000000-0000-0000-0000-000000000000}
+template: {04646A89-996F-4EE7-878A-FFDBF1F0EF0D}
+templatekey: Json Rendering
+
+----field----
+field: {037FE404-DD19-4BF7-8E30-4DADF68B27B0}
+name: componentName
+key: componentname
+content-length: 9
+
+ProxyDemo
+----field----
+field: {A77E8568-1AB3-44F1-A664-B7C37EC7810D}
+name: Parameters Template
+key: parameters template
+content-length: 38
+
+{5301B502-18EE-40F6-A8BC-CD8FCCA8A023}
+----field----
+field: {7D8AE35F-9ED1-43B5-96A2-0A5F040D4E4E}
+name: Open Properties after Add
+key: open properties after add
+content-length: 1
+
+1
+----field----
+field: {B0B15510-B138-470E-8F33-8DA2E228AAFE}
+name: Rendering Contents Resolver
+key: rendering contents resolver
+content-length: 38
+
+{22895D73-DC8F-4063-B378-9AB2CBEFC871}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 27
+
+applications/32x32/find.png
+----version----
+language: en
+version: 1
+revision: 562eb81a-3335-4280-8571-d0963770d047
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20200225T113145Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+562eb81a-3335-4280-8571-d0963770d047
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20200225T120353Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
