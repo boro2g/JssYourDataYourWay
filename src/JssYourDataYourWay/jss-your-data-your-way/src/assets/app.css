@@ -8,3 +8,5 @@ a[target='_blank']:after {
   are set to edit mode.
 */
 .scChromeData, .scpm { display: none !important; }
+
+.header{ font-weight: bold;}

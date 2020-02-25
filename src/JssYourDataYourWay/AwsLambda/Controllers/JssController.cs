@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using AwsLambda.Models;
 using Boro2g.Core.Environment;
 using Microsoft.AspNetCore.Mvc;
@@ -25,7 +26,7 @@ namespace AwsLambda.Controllers
 
             return new ContentModel
             {
-                Content = _environmentVariables.GetString("content", "Hello Jss"),
+                Content = $"{_environmentVariables.GetString("content", "Hello Jss AWS")} {DateTime.UtcNow.ToString("s")}",
                 DelayMs = delayMs,
             };
         }

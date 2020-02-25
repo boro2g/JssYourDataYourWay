@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using AzureFunction.Models;
 using Boro2g.Core.Environment;
 using Microsoft.AspNetCore.Http;
@@ -26,7 +27,7 @@ namespace AzureFunction
 
             return new OkObjectResult(new ContentModel
             {
-                Content = environmentVariables.GetString("content", "Hello Jss Azure"),
+                Content = $"{environmentVariables.GetString("content", "Hello Jss Azure")} {DateTime.UtcNow.ToString("s")}",
                 DelayMs = delayMs,
             });
         }
