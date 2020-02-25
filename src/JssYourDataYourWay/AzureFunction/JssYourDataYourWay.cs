@@ -1,16 +1,15 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using AzureFunction.Models;
+using Boro2g.Core.Environment;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
 namespace AzureFunction
 {
-    // https://jssyourdatayourway.azure.boro2g.co.uk/api/JssYourDataYourWay?name=bob
+    // https://jssyourdatayourway.azure.boro2g.co.uk/api/JssYourDataYourWay
 
     public static class JssYourDataYourWay
     {
@@ -19,17 +18,17 @@ namespace AzureFunction
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            var environmentVariables = new EnvironmentVariables();
 
-            string name = req.Query["name"];
+            var delayMs = environmentVariables.GetInt("delayMs", 0);
 
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
+            await Task.Delay(delayMs);
 
-            return name != null
-                ? (ActionResult)new OkObjectResult($"Hello, {name}. {Environment.GetEnvironmentVariable("TestSetting")}")
-                : new BadRequestObjectResult("Please pass a name on the query string or in the request body");
+            return new OkObjectResult(new ContentModel
+            {
+                Content = environmentVariables.GetString("content", "Hello Jss Azure"),
+                DelayMs = delayMs,
+            });
         }
     }
 }

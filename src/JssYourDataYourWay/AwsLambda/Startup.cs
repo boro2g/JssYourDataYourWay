@@ -1,3 +1,4 @@
+﻿using Boro2g.Core.Environment;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -22,8 +23,7 @@ namespace AwsLambda
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            // Add S3 to the ASP.NET Core dependency injection framework.
-            services.AddAWSService<Amazon.S3.IAmazonS3>();
+            services.AddSingleton<IEnvironmentVariables, EnvironmentVariables>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
