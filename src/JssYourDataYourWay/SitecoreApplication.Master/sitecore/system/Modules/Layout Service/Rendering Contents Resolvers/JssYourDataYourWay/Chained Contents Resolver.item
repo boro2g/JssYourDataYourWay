@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {9A380539-050E-4BAC-AC24-E39FB08FC6AA}
+database: master
+path: /sitecore/system/Modules/Layout Service/Rendering Contents Resolvers/JssYourDataYourWay/Chained Contents Resolver
+parent: {902546D4-89A1-42FB-B9E2-752424F7B372}
+name: Chained Contents Resolver
+master: {00000000-0000-0000-0000-000000000000}
+template: {814C1DBB-B118-4511-BA2B-7288ED3D490B}
+templatekey: Rendering Contents Resolver
+
+----field----
+field: {DE218EDE-A9AD-4B04-86C5-9FF593CCF39D}
+name: Type
+key: type
+content-length: 83
+
+SitecoreApplication.JssYourDataYourWay.ChainedContentsResolver, SitecoreApplication
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 26
+
+people/32x32/carabiner.png
+----version----
+language: en
+version: 1
+revision: 6e632425-f098-468e-8e7d-25c4e1b51f5d
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20200225T113221Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+6e632425-f098-468e-8e7d-25c4e1b51f5d
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20200302T132809Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

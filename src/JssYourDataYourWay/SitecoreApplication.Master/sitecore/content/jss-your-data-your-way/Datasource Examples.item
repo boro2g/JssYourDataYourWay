@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {A83F0DDA-F58B-4545-B665-2CFE23A4EDEC}
+database: master
+path: /sitecore/content/jss-your-data-your-way/Datasource Examples
+parent: {753A5B91-D9AD-5218-94F3-B5F212DE5D85}
+name: Datasource Examples
+master: {00000000-0000-0000-0000-000000000000}
+template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
+templatekey: Folder
+
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{3C27B8BF-1985-4EF8-BCD0-FBA7A84128E7}
+----version----
+language: en
+version: 1
+revision: b2034e21-81c6-4871-ab9c-10d9d6187af0
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20200302T143012Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+b2034e21-81c6-4871-ab9c-10d9d6187af0
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20200302T143025Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

@@ -22,9 +22,9 @@ namespace SitecoreApplication.JssYourDataYourWay
 
             return new
             {
-                name = "test",
+                name = "SiteCore",
                 date = DateTime.Now,
-                hello = "world"
+                hello = "ftw"
             };
         }
     }

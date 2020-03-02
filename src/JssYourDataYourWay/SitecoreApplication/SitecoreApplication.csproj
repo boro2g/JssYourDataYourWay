@@ -518,8 +518,10 @@
   <ItemGroup>
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="JssYourDataYourWay\ChainedContentsResolver.cs" />
     <Compile Include="JssYourDataYourWay\ExampleContentsResolver.cs" />
     <Compile Include="JssYourDataYourWay\ExampleContextExtension.cs" />
+    <Compile Include="JssYourDataYourWay\ObjectMerger.cs" />
     <Compile Include="JssYourDataYourWay\ProxyContentsResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
