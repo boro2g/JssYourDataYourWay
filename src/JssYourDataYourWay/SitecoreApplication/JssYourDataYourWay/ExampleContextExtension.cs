@@ -14,8 +14,8 @@ namespace SitecoreApplication.JssYourDataYourWay
         {
             args.ContextData.Add("securityInfo", new
             {
-                isAnonymous = !Sitecore.Context.User.IsAuthenticated,                
-            });            
+                isAnonymous = !Sitecore.Context.User.IsAuthenticated,
+            });
         }
     }
 }
