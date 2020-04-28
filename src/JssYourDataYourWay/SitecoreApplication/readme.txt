@@ -14,9 +14,13 @@ https://eu-west-1.console.aws.amazon.com/lambda/home?region=eu-west-1#/functions
 
 Jss
 npm install -g @sitecore-jss/sitecore-jss-cli
-jss create jss-your-data-your-way react
-cd jss-your-data-your-way
-jss start
+if creating
+ jss create jss-your-data-your-way react
+ cd jss-your-data-your-way
+ jss start
+
+if cloning
+ npm install
 
 jss deploy app --acceptCertificate [cert thumbprint]
 
