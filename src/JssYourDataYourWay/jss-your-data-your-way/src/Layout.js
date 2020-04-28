@@ -1,14 +1,18 @@
-import React from 'react';
-import { Placeholder, VisitorIdentification, withSitecoreContext } from '@sitecore-jss/sitecore-jss-react';
-import { NavLink } from 'react-router-dom';
-import { withTranslation } from 'react-i18next';
-import Helmet from 'react-helmet';
+import React from "react";
+import {
+  Placeholder,
+  VisitorIdentification,
+  withSitecoreContext,
+} from "@sitecore-jss/sitecore-jss-react";
+import { NavLink } from "react-router-dom";
+import { withTranslation } from "react-i18next";
+import Helmet from "react-helmet";
 
 // Using bootstrap is completely optional. It's used here to provide a clean layout for samples,
 // without needing extra CSS in the sample app. Remove it in package.json as well if it's removed here.
-import 'bootstrap/dist/css/bootstrap.css';
-import './assets/app.css';
-import logo from './assets/sc_logo.svg';
+import "bootstrap/dist/css/bootstrap.css";
+import "./assets/app.css";
+import logo from "./assets/sc_logo.svg";
 
 /*
   APP LAYOUT
@@ -21,38 +25,22 @@ import logo from './assets/sc_logo.svg';
 // This is boilerplate navigation for sample purposes. Most apps should throw this away and use their own navigation implementation.
 // Most apps may also wish to use GraphQL for their navigation construction; this sample does not simply to support disconnected mode.
 let Navigation = ({ t, i18n }) => (
-  <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom">    
+  <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom">
     <h5 className="my-0 mr-md-auto font-weight-normal">
       <NavLink to="/" className="text-dark">
         <img src={logo} alt="Sitecore" />
       </NavLink>
     </h5>
-    {/* <p>
-      Context info: {t.sitecoreContext.securityInfo.isAnonymous}
-    </p> */}
-    <nav className="my-2 my-md-0 mr-md-3">
-      <a
-        className="p-2 text-dark"
-        href="https://jss.sitecore.net"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {t('Documentation')}
-      </a>
-      <NavLink to="/styleguide" className="p-2 text-dark">
-        {t('Styleguide')}
-      </NavLink>
-      <NavLink to="/graphql" className="p-2 text-dark">
-        {t('GraphQL')}
-      </NavLink>
-    </nav>
+    <p>JSS - Your Data, Your Way</p>
   </div>
 );
 
 let ContextDemo = (props) => (
-  <div data-e2e-class="styleguide-layout-tabs-tab"> 
-    <p className="header">Context demo</p>
-    <p>isAnonymous: {props.sitecoreContext.securityInfo.isAnonymous.toString()}</p>
+  <div data-e2e-class="styleguide-layout-tabs-tab">
+    <p className="header">Context Extension demo</p>
+    <p>
+      isAnonymous: {props.sitecoreContext.securityInfo.isAnonymous.toString()}
+    </p>
   </div>
 );
 
@@ -68,10 +56,18 @@ const Layout = ({ route }) => (
     {/* react-helmet enables setting <head> contents, like title and OG meta tags */}
     <Helmet>
       <title>
-        {(route.fields && route.fields.pageTitle && route.fields.pageTitle.value) || 'Page'}
+        {(route.fields &&
+          route.fields.pageTitle &&
+          route.fields.pageTitle.value) ||
+          "Page"}
       </title>
     </Helmet>
-
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <style>{"\
+        .window{\
+          font-size:16px;\
+        }\
+      "}</style>
     {/*
       VisitorIdentification is necessary for Sitecore Analytics to determine if the visitor is a robot.
       If Sitecore XP (with xConnect/xDB) is used, this is required or else analytics will not be collected for the JSS app.
@@ -80,13 +76,15 @@ const Layout = ({ route }) => (
       VI detection only runs once for a given analytics ID, so this is not a recurring operation once cookies are established.
     */}
     <VisitorIdentification />
+    <div className="window" style={{ padding: 20 }}>
+      <Navigation />
 
-    <Navigation />    
+      {/* root placeholder for the app, which we add components to using route data */}
+      <div className="container">
+        <ContextDemo />
 
-    {/* root placeholder for the app, which we add components to using route data */}
-    <div className="container">
-      <ContextDemo />
-      <Placeholder name="jss-main" rendering={route} />      
+        <Placeholder name="jss-main" rendering={route} />
+      </div>
     </div>
   </React.Fragment>
 );
